@@ -1,0 +1,52 @@
+apiVersion: v1
+entries:
+  peerbot:
+  - annotations:
+      artifacthub.io/changes: "- kind: added\n  description: Initial Helm chart for
+        Peerbot deployment\n- kind: added  \n  description: Support for PostgreSQL
+        dependency\n- kind: added\n  description: Kubernetes deployment with persistent
+        volumes\n"
+      artifacthub.io/containsSecurityUpdates: "false"
+      artifacthub.io/images: "- name: peerbot-dispatcher\n  image: ghcr.io/buremba/peerbot-dispatcher:latest\n-
+        name: peerbot-orchestrator  \n  image: ghcr.io/buremba/peerbot-orchestrator:latest\n-
+        name: peerbot-worker\n  image: ghcr.io/buremba/peerbot-worker:latest\n"
+      artifacthub.io/license: MIT
+      artifacthub.io/links: |
+        - name: GitHub Repository
+          url: https://github.com/buremba/peerbot
+        - name: Documentation
+          url: https://github.com/buremba/peerbot#readme
+      artifacthub.io/operator: "false"
+      artifacthub.io/operatorCapabilities: Basic Install
+      artifacthub.io/recommendations: |
+        - url: https://artifacthub.io/packages/helm/bitnami/postgresql
+      category: Communication
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-09-11T16:18:27.155471+01:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.3.0
+    description: Peerbot - Kubernetes deployment for thread-based AI conversations
+    digest: fd6cd567b22e20df9913875e22b0b52fa03249d6905ad4ff4ea368d064fb2e54
+    home: https://github.com/buremba/peerbot
+    keywords:
+    - claude
+    - slack
+    - ai
+    - bot
+    - kubernetes
+    - conversations
+    maintainers:
+    - email: emrekabakci@gmail.com
+      name: Burak Emre Kabakci
+    name: peerbot
+    sources:
+    - https://github.com/buremba/peerbot
+    type: application
+    urls:
+    - https://buremba.github.io/helm-charts/peerbot-1.0.1.tgz
+    version: 1.0.1
+generated: "2025-09-11T16:18:27.151527+01:00"
