@@ -1,26 +1,20 @@
-# Helm Charts Repository
+# Termos Helm Charts Repository
 
-This repository hosts Helm charts for various projects.
-
-## Available Charts
-
-- `peerbot` - Kubernetes deployment chart for Peerbot Slack bot
+This repository hosts Helm charts for Termos.
 
 ## Usage
 
 ```bash
-helm repo add peerbot https://buremba.github.io/helm-charts/
+helm repo add termos https://termos-dev.github.io/helm-charts/
 helm repo update
-helm search repo peerbot
-helm install my-peerbot peerbot/peerbot
+helm install my-termos termos/termos
 ```
 
-## Repository Structure
+## Available Charts
 
-- Chart packages (.tgz files) are in the root directory
-- `index.yaml` contains the repository index
-- Source charts are maintained in their respective private repositories
+- `termos` - Kubernetes deployment chart for Termos Slack bot
 
-## License
+## Source
 
-See individual chart licenses.
+The source code for Termos is maintained in a private repository.
+For issues and feature requests, please contact the maintainers.

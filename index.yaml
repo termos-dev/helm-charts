@@ -23,7 +23,7 @@ entries:
       category: Communication
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-09-11T16:18:27.155471+01:00"
+    created: "2026-02-04T17:32:15.042951861Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -47,6 +47,60 @@ entries:
     - https://github.com/buremba/peerbot
     type: application
     urls:
-    - https://buremba.github.io/helm-charts/peerbot-1.0.1.tgz
+    - https://termos-dev.github.io/helm-charts/peerbot-1.0.1.tgz
     version: 1.0.1
-generated: "2025-09-11T16:18:27.151527+01:00"
+  termos:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial Helm chart for Termos deployment
+        - kind: added
+          description: Kubernetes deployment with persistent volumes
+      artifacthub.io/containsSecurityUpdates: "false"
+      artifacthub.io/images: |
+        - name: termos-dispatcher
+          image: buremba/termos-dispatcher:latest
+        - name: termos-worker
+          image: buremba/termos-worker-base:latest
+      artifacthub.io/license: MIT
+      artifacthub.io/links: |
+        - name: GitHub Repository
+          url: https://github.com/termos-dev/termos
+        - name: Documentation
+          url: https://github.com/termos-dev/termos#readme
+      artifacthub.io/operator: "false"
+      artifacthub.io/operatorCapabilities: Basic Install
+      category: Communication
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-02-04T17:32:15.052807229Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: ~24.x
+    - condition: tempo.enabled
+      name: tempo
+      repository: https://grafana.github.io/helm-charts
+      version: ~1.x
+    description: Termos - Kubernetes deployment for thread-based AI conversations
+    digest: 775762d2ee72583a3d9c8250e9f9983cc27d86795596c483889f48b6d70b5eca
+    home: https://github.com/termos-dev/termos
+    keywords:
+    - claude
+    - slack
+    - ai
+    - bot
+    - kubernetes
+    - conversations
+    maintainers:
+    - email: emrekabakci@gmail.com
+      name: Burak Emre Kabakci
+    name: termos
+    sources:
+    - https://github.com/termos-dev/termos
+    type: application
+    urls:
+    - https://termos-dev.github.io/helm-charts/termos-1.0.1.tgz
+    version: 1.0.1
+generated: "2026-02-04T17:32:15.035570233Z"
