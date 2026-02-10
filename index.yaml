@@ -23,7 +23,7 @@ entries:
       category: Communication
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-02-04T17:32:15.042951861Z"
+    created: "2026-02-10T03:59:32.296079187Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -73,7 +73,7 @@ entries:
       category: Communication
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-02-04T17:32:15.052807229Z"
+    created: "2026-02-10T03:59:32.30505517Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -84,7 +84,7 @@ entries:
       repository: https://grafana.github.io/helm-charts
       version: ~1.x
     description: Termos - Kubernetes deployment for thread-based AI conversations
-    digest: 775762d2ee72583a3d9c8250e9f9983cc27d86795596c483889f48b6d70b5eca
+    digest: f6040c7ff893eb9ccc61a338ab5e6736ba6d3ba125ce121e2e5a027b43ebdbe5
     home: https://github.com/termos-dev/termos
     keywords:
     - claude
@@ -103,4 +103,4 @@ entries:
     urls:
     - https://termos-dev.github.io/helm-charts/termos-1.0.1.tgz
     version: 1.0.1
-generated: "2026-02-04T17:32:15.035570233Z"
+generated: "2026-02-10T03:59:32.28943119Z"
